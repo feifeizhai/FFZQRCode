@@ -1,0 +1,17 @@
+PODS:
+  - Masonry (1.0.2)
+  - OpenCV (3.2.0):
+    - OpenCV/Dynamic (= 3.2.0)
+  - OpenCV/Dynamic (3.2.0)
+
+DEPENDENCIES:
+  - Masonry
+  - OpenCV
+
+SPEC CHECKSUMS:
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  OpenCV: 0f7ab403d1e81769bc6f4f524c3c6928ecb1fdb8
+
+PODFILE CHECKSUM: 09c3f4702dc47b841008fb2e7fec6dd31c8692d9
+
+COCOAPODS: 1.2.1

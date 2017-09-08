@@ -1,0 +1,677 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		807C0B1B1F53BAED0029A5AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 807C0B1A1F53BAED0029A5AB /* main.m */; };
+		807C0B1E1F53BAED0029A5AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 807C0B1D1F53BAED0029A5AB /* AppDelegate.m */; };
+		807C0B211F53BAED0029A5AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 807C0B201F53BAED0029A5AB /* ViewController.m */; };
+		807C0B241F53BAED0029A5AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807C0B221F53BAED0029A5AB /* Main.storyboard */; };
+		807C0B261F53BAED0029A5AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 807C0B251F53BAED0029A5AB /* Assets.xcassets */; };
+		807C0B291F53BAED0029A5AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807C0B271F53BAED0029A5AB /* LaunchScreen.storyboard */; };
+		807C0B341F53BAED0029A5AB /* FFZQRCodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 807C0B331F53BAED0029A5AB /* FFZQRCodeTests.m */; };
+		807C0B3F1F53BAED0029A5AB /* FFZQRCodeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 807C0B3E1F53BAED0029A5AB /* FFZQRCodeUITests.m */; };
+		807C0B4E1F53BD9D0029A5AB /* FFZQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 807C0B4D1F53BD9D0029A5AB /* FFZQRCodeViewController.m */; };
+		807C0B691F54F2720029A5AB /* QRCodeLocation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 807C0B681F54F2720029A5AB /* QRCodeLocation.mm */; };
+		807C0B781F57CEC20029A5AB /* FFZRecoderTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 807C0B771F57CEC20029A5AB /* FFZRecoderTools.m */; };
+		807C0B7E1F57D2940029A5AB /* FFZRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 807C0B7D1F57D2940029A5AB /* FFZRecorder.m */; };
+		807C0B841F57D7A80029A5AB /* FFZPhotoConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 807C0B831F57D7A80029A5AB /* FFZPhotoConfiguration.m */; };
+		807C0B871F57DA710029A5AB /* FFZRecordToolsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 807C0B861F57DA710029A5AB /* FFZRecordToolsView.m */; };
+		80B5EB4D1F614782000FD258 /* FFZQRCodeResourse.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 80B5EB4C1F614782000FD258 /* FFZQRCodeResourse.bundle */; };
+		83AEE02389089D41FC4A9CD4 /* libPods-FFZQRCode.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 118B96E2D537278B6A554D9C /* libPods-FFZQRCode.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		807C0B301F53BAED0029A5AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 807C0B0E1F53BAED0029A5AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 807C0B151F53BAED0029A5AB;
+			remoteInfo = FFZQRCode;
+		};
+		807C0B3B1F53BAED0029A5AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 807C0B0E1F53BAED0029A5AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 807C0B151F53BAED0029A5AB;
+			remoteInfo = FFZQRCode;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		118B96E2D537278B6A554D9C /* libPods-FFZQRCode.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FFZQRCode.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B58A9F0E2CE9A2D14DB0155 /* Pods-FFZQRCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FFZQRCode.release.xcconfig"; path = "Pods/Target Support Files/Pods-FFZQRCode/Pods-FFZQRCode.release.xcconfig"; sourceTree = "<group>"; };
+		807C0B161F53BAED0029A5AB /* FFZQRCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FFZQRCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		807C0B1A1F53BAED0029A5AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		807C0B1C1F53BAED0029A5AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		807C0B1D1F53BAED0029A5AB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		807C0B1F1F53BAED0029A5AB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		807C0B201F53BAED0029A5AB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		807C0B231F53BAED0029A5AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		807C0B251F53BAED0029A5AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		807C0B281F53BAED0029A5AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		807C0B2A1F53BAED0029A5AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		807C0B2F1F53BAED0029A5AB /* FFZQRCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FFZQRCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		807C0B331F53BAED0029A5AB /* FFZQRCodeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFZQRCodeTests.m; sourceTree = "<group>"; };
+		807C0B351F53BAED0029A5AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		807C0B3A1F53BAED0029A5AB /* FFZQRCodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FFZQRCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		807C0B3E1F53BAED0029A5AB /* FFZQRCodeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFZQRCodeUITests.m; sourceTree = "<group>"; };
+		807C0B401F53BAED0029A5AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		807C0B4C1F53BD9D0029A5AB /* FFZQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFZQRCodeViewController.h; sourceTree = "<group>"; };
+		807C0B4D1F53BD9D0029A5AB /* FFZQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFZQRCodeViewController.m; sourceTree = "<group>"; };
+		807C0B671F54F2720029A5AB /* QRCodeLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeLocation.h; sourceTree = "<group>"; };
+		807C0B681F54F2720029A5AB /* QRCodeLocation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = QRCodeLocation.mm; sourceTree = "<group>"; };
+		807C0B6A1F55160C0029A5AB /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		807C0B761F57CEC20029A5AB /* FFZRecoderTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFZRecoderTools.h; sourceTree = "<group>"; };
+		807C0B771F57CEC20029A5AB /* FFZRecoderTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFZRecoderTools.m; sourceTree = "<group>"; };
+		807C0B7C1F57D2940029A5AB /* FFZRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFZRecorder.h; sourceTree = "<group>"; };
+		807C0B7D1F57D2940029A5AB /* FFZRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFZRecorder.m; sourceTree = "<group>"; };
+		807C0B7F1F57D44E0029A5AB /* FFZRecorderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFZRecorderDelegate.h; sourceTree = "<group>"; };
+		807C0B821F57D7A80029A5AB /* FFZPhotoConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFZPhotoConfiguration.h; sourceTree = "<group>"; };
+		807C0B831F57D7A80029A5AB /* FFZPhotoConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFZPhotoConfiguration.m; sourceTree = "<group>"; };
+		807C0B851F57DA710029A5AB /* FFZRecordToolsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFZRecordToolsView.h; sourceTree = "<group>"; };
+		807C0B861F57DA710029A5AB /* FFZRecordToolsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFZRecordToolsView.m; sourceTree = "<group>"; };
+		80B5EB4C1F614782000FD258 /* FFZQRCodeResourse.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FFZQRCodeResourse.bundle; sourceTree = "<group>"; };
+		BCAF956CF68DA0E781498FAC /* Pods-FFZQRCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FFZQRCode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FFZQRCode/Pods-FFZQRCode.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		807C0B131F53BAED0029A5AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83AEE02389089D41FC4A9CD4 /* libPods-FFZQRCode.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		807C0B2C1F53BAED0029A5AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		807C0B371F53BAED0029A5AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4ECAAC4AEE5E005355C4DEE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				118B96E2D537278B6A554D9C /* libPods-FFZQRCode.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		807C0B0D1F53BAED0029A5AB = {
+			isa = PBXGroup;
+			children = (
+				807C0B181F53BAED0029A5AB /* FFZQRCode */,
+				807C0B321F53BAED0029A5AB /* FFZQRCodeTests */,
+				807C0B3D1F53BAED0029A5AB /* FFZQRCodeUITests */,
+				807C0B171F53BAED0029A5AB /* Products */,
+				EA5F453E62233BF7244EFDAC /* Pods */,
+				4ECAAC4AEE5E005355C4DEE2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		807C0B171F53BAED0029A5AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				807C0B161F53BAED0029A5AB /* FFZQRCode.app */,
+				807C0B2F1F53BAED0029A5AB /* FFZQRCodeTests.xctest */,
+				807C0B3A1F53BAED0029A5AB /* FFZQRCodeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		807C0B181F53BAED0029A5AB /* FFZQRCode */ = {
+			isa = PBXGroup;
+			children = (
+				80B5EB4C1F614782000FD258 /* FFZQRCodeResourse.bundle */,
+				807C0B751F57C3800029A5AB /* FFZQRCodeHelper */,
+				807C0B1C1F53BAED0029A5AB /* AppDelegate.h */,
+				807C0B1D1F53BAED0029A5AB /* AppDelegate.m */,
+				807C0B1F1F53BAED0029A5AB /* ViewController.h */,
+				807C0B201F53BAED0029A5AB /* ViewController.m */,
+				807C0B4C1F53BD9D0029A5AB /* FFZQRCodeViewController.h */,
+				807C0B4D1F53BD9D0029A5AB /* FFZQRCodeViewController.m */,
+				807C0B671F54F2720029A5AB /* QRCodeLocation.h */,
+				807C0B681F54F2720029A5AB /* QRCodeLocation.mm */,
+				807C0B221F53BAED0029A5AB /* Main.storyboard */,
+				807C0B251F53BAED0029A5AB /* Assets.xcassets */,
+				807C0B271F53BAED0029A5AB /* LaunchScreen.storyboard */,
+				807C0B2A1F53BAED0029A5AB /* Info.plist */,
+				807C0B191F53BAED0029A5AB /* Supporting Files */,
+			);
+			path = FFZQRCode;
+			sourceTree = "<group>";
+		};
+		807C0B191F53BAED0029A5AB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				807C0B1A1F53BAED0029A5AB /* main.m */,
+				807C0B6A1F55160C0029A5AB /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		807C0B321F53BAED0029A5AB /* FFZQRCodeTests */ = {
+			isa = PBXGroup;
+			children = (
+				807C0B331F53BAED0029A5AB /* FFZQRCodeTests.m */,
+				807C0B351F53BAED0029A5AB /* Info.plist */,
+			);
+			path = FFZQRCodeTests;
+			sourceTree = "<group>";
+		};
+		807C0B3D1F53BAED0029A5AB /* FFZQRCodeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				807C0B3E1F53BAED0029A5AB /* FFZQRCodeUITests.m */,
+				807C0B401F53BAED0029A5AB /* Info.plist */,
+			);
+			path = FFZQRCodeUITests;
+			sourceTree = "<group>";
+		};
+		807C0B751F57C3800029A5AB /* FFZQRCodeHelper */ = {
+			isa = PBXGroup;
+			children = (
+				807C0B761F57CEC20029A5AB /* FFZRecoderTools.h */,
+				807C0B771F57CEC20029A5AB /* FFZRecoderTools.m */,
+				807C0B7C1F57D2940029A5AB /* FFZRecorder.h */,
+				807C0B7D1F57D2940029A5AB /* FFZRecorder.m */,
+				807C0B7F1F57D44E0029A5AB /* FFZRecorderDelegate.h */,
+				807C0B821F57D7A80029A5AB /* FFZPhotoConfiguration.h */,
+				807C0B831F57D7A80029A5AB /* FFZPhotoConfiguration.m */,
+				807C0B851F57DA710029A5AB /* FFZRecordToolsView.h */,
+				807C0B861F57DA710029A5AB /* FFZRecordToolsView.m */,
+			);
+			path = FFZQRCodeHelper;
+			sourceTree = "<group>";
+		};
+		EA5F453E62233BF7244EFDAC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCAF956CF68DA0E781498FAC /* Pods-FFZQRCode.debug.xcconfig */,
+				6B58A9F0E2CE9A2D14DB0155 /* Pods-FFZQRCode.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		807C0B151F53BAED0029A5AB /* FFZQRCode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 807C0B431F53BAED0029A5AB /* Build configuration list for PBXNativeTarget "FFZQRCode" */;
+			buildPhases = (
+				BDC34072547D7CE7927E8B7D /* [CP] Check Pods Manifest.lock */,
+				807C0B121F53BAED0029A5AB /* Sources */,
+				807C0B131F53BAED0029A5AB /* Frameworks */,
+				807C0B141F53BAED0029A5AB /* Resources */,
+				6166B39458016BE294297E60 /* [CP] Embed Pods Frameworks */,
+				C43FF30363C907F7D922CE30 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FFZQRCode;
+			productName = FFZQRCode;
+			productReference = 807C0B161F53BAED0029A5AB /* FFZQRCode.app */;
+			productType = "com.apple.product-type.application";
+		};
+		807C0B2E1F53BAED0029A5AB /* FFZQRCodeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 807C0B461F53BAED0029A5AB /* Build configuration list for PBXNativeTarget "FFZQRCodeTests" */;
+			buildPhases = (
+				807C0B2B1F53BAED0029A5AB /* Sources */,
+				807C0B2C1F53BAED0029A5AB /* Frameworks */,
+				807C0B2D1F53BAED0029A5AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				807C0B311F53BAED0029A5AB /* PBXTargetDependency */,
+			);
+			name = FFZQRCodeTests;
+			productName = FFZQRCodeTests;
+			productReference = 807C0B2F1F53BAED0029A5AB /* FFZQRCodeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		807C0B391F53BAED0029A5AB /* FFZQRCodeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 807C0B491F53BAED0029A5AB /* Build configuration list for PBXNativeTarget "FFZQRCodeUITests" */;
+			buildPhases = (
+				807C0B361F53BAED0029A5AB /* Sources */,
+				807C0B371F53BAED0029A5AB /* Frameworks */,
+				807C0B381F53BAED0029A5AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				807C0B3C1F53BAED0029A5AB /* PBXTargetDependency */,
+			);
+			name = FFZQRCodeUITests;
+			productName = FFZQRCodeUITests;
+			productReference = 807C0B3A1F53BAED0029A5AB /* FFZQRCodeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		807C0B0E1F53BAED0029A5AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "非非宅";
+				TargetAttributes = {
+					807C0B151F53BAED0029A5AB = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 697TSGGHN8;
+						ProvisioningStyle = Automatic;
+					};
+					807C0B2E1F53BAED0029A5AB = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 697TSGGHN8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 807C0B151F53BAED0029A5AB;
+					};
+					807C0B391F53BAED0029A5AB = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 697TSGGHN8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 807C0B151F53BAED0029A5AB;
+					};
+				};
+			};
+			buildConfigurationList = 807C0B111F53BAED0029A5AB /* Build configuration list for PBXProject "FFZQRCode" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 807C0B0D1F53BAED0029A5AB;
+			productRefGroup = 807C0B171F53BAED0029A5AB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				807C0B151F53BAED0029A5AB /* FFZQRCode */,
+				807C0B2E1F53BAED0029A5AB /* FFZQRCodeTests */,
+				807C0B391F53BAED0029A5AB /* FFZQRCodeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		807C0B141F53BAED0029A5AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80B5EB4D1F614782000FD258 /* FFZQRCodeResourse.bundle in Resources */,
+				807C0B291F53BAED0029A5AB /* LaunchScreen.storyboard in Resources */,
+				807C0B261F53BAED0029A5AB /* Assets.xcassets in Resources */,
+				807C0B241F53BAED0029A5AB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		807C0B2D1F53BAED0029A5AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		807C0B381F53BAED0029A5AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6166B39458016BE294297E60 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FFZQRCode/Pods-FFZQRCode-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDC34072547D7CE7927E8B7D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C43FF30363C907F7D922CE30 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FFZQRCode/Pods-FFZQRCode-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		807C0B121F53BAED0029A5AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				807C0B691F54F2720029A5AB /* QRCodeLocation.mm in Sources */,
+				807C0B781F57CEC20029A5AB /* FFZRecoderTools.m in Sources */,
+				807C0B211F53BAED0029A5AB /* ViewController.m in Sources */,
+				807C0B7E1F57D2940029A5AB /* FFZRecorder.m in Sources */,
+				807C0B1E1F53BAED0029A5AB /* AppDelegate.m in Sources */,
+				807C0B841F57D7A80029A5AB /* FFZPhotoConfiguration.m in Sources */,
+				807C0B1B1F53BAED0029A5AB /* main.m in Sources */,
+				807C0B871F57DA710029A5AB /* FFZRecordToolsView.m in Sources */,
+				807C0B4E1F53BD9D0029A5AB /* FFZQRCodeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		807C0B2B1F53BAED0029A5AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				807C0B341F53BAED0029A5AB /* FFZQRCodeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		807C0B361F53BAED0029A5AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				807C0B3F1F53BAED0029A5AB /* FFZQRCodeUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		807C0B311F53BAED0029A5AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 807C0B151F53BAED0029A5AB /* FFZQRCode */;
+			targetProxy = 807C0B301F53BAED0029A5AB /* PBXContainerItemProxy */;
+		};
+		807C0B3C1F53BAED0029A5AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 807C0B151F53BAED0029A5AB /* FFZQRCode */;
+			targetProxy = 807C0B3B1F53BAED0029A5AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		807C0B221F53BAED0029A5AB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				807C0B231F53BAED0029A5AB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		807C0B271F53BAED0029A5AB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				807C0B281F53BAED0029A5AB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		807C0B411F53BAED0029A5AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		807C0B421F53BAED0029A5AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		807C0B441F53BAED0029A5AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCAF956CF68DA0E781498FAC /* Pods-FFZQRCode.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 697TSGGHN8;
+				GCC_PREFIX_HEADER = "/Users/jingge_xuxuebo/Desktop/项目资料/FFZQRCode/FFZQRCode/PrefixHeader.pch";
+				INFOPLIST_FILE = FFZQRCode/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ffz.FFZQRCode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		807C0B451F53BAED0029A5AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B58A9F0E2CE9A2D14DB0155 /* Pods-FFZQRCode.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 697TSGGHN8;
+				GCC_PREFIX_HEADER = "/Users/jingge_xuxuebo/Desktop/项目资料/FFZQRCode/FFZQRCode/PrefixHeader.pch";
+				INFOPLIST_FILE = FFZQRCode/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ffz.FFZQRCode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		807C0B471F53BAED0029A5AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 697TSGGHN8;
+				INFOPLIST_FILE = FFZQRCodeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ffz.FFZQRCodeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FFZQRCode.app/FFZQRCode";
+			};
+			name = Debug;
+		};
+		807C0B481F53BAED0029A5AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 697TSGGHN8;
+				INFOPLIST_FILE = FFZQRCodeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ffz.FFZQRCodeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FFZQRCode.app/FFZQRCode";
+			};
+			name = Release;
+		};
+		807C0B4A1F53BAED0029A5AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 697TSGGHN8;
+				INFOPLIST_FILE = FFZQRCodeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ffz.FFZQRCodeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FFZQRCode;
+			};
+			name = Debug;
+		};
+		807C0B4B1F53BAED0029A5AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 697TSGGHN8;
+				INFOPLIST_FILE = FFZQRCodeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ffz.FFZQRCodeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FFZQRCode;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		807C0B111F53BAED0029A5AB /* Build configuration list for PBXProject "FFZQRCode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				807C0B411F53BAED0029A5AB /* Debug */,
+				807C0B421F53BAED0029A5AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		807C0B431F53BAED0029A5AB /* Build configuration list for PBXNativeTarget "FFZQRCode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				807C0B441F53BAED0029A5AB /* Debug */,
+				807C0B451F53BAED0029A5AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		807C0B461F53BAED0029A5AB /* Build configuration list for PBXNativeTarget "FFZQRCodeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				807C0B471F53BAED0029A5AB /* Debug */,
+				807C0B481F53BAED0029A5AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		807C0B491F53BAED0029A5AB /* Build configuration list for PBXNativeTarget "FFZQRCodeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				807C0B4A1F53BAED0029A5AB /* Debug */,
+				807C0B4B1F53BAED0029A5AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 807C0B0E1F53BAED0029A5AB /* Project object */;
+}

@@ -1,0 +1,14 @@
+//
+//  PrefixHeader.pch
+//  FFZQRCode
+//
+//  Created by 景格_徐薛波 on 2017/8/29.
+//  Copyright © 2017年 非非宅. All rights reserved.
+//
+
+
+#ifdef __cplusplus
+#import <opencv2/opencv.hpp>
+#import <opencv2/imgproc/types_c.h>
+#import <opencv2/imgcodecs/ios.h>
+#endif
