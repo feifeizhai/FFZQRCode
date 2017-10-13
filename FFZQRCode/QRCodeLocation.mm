@@ -86,6 +86,7 @@
                 area = contourArea(contours[i]);//得出一个二维码定位角的面积，以便计算其边长（area_side）（数据覆盖无所谓，三个定位角中任意一个数据都可以）
                 
                 //NSLog(@"/*/*/*/*/*w=%f, h=%f", rectPoint.size.width, rectPoint.size.height);
+                
             }
             NSLog(@"/*/*/*/*/*w=%f, h=%f", rectPoint.size.width, rectPoint.size.height);
         }
