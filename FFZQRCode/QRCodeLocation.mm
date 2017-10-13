@@ -75,11 +75,19 @@
         
         if ( ic >= 2)
         {
-            contours2.push_back(contours[parentIdx]);
-            //drawContours(drawing, contours, parentIdx,  CV_RGB(rng.uniform(0,255),rng.uniform(0,255),rng.uniform(0,255)) , 1, 8);
-            ic = 0;
-            parentIdx = -1;
-            area = contourArea(contours[i]);//得出一个二维码定位角的面积，以便计算其边长（area_side）（数据覆盖无所谓，三个定位角中任意一个数据都可以）
+              cv::RotatedRect rectPoint =  minAreaRect(contours[i]);
+            CGFloat w = rectPoint.size.width;
+            CGFloat h = rectPoint.size.height;
+            
+            if (w / h < 1.1 && w / h > 0.9) {
+                contours2.push_back(contours[parentIdx]);
+                ic = 0;
+                parentIdx = -1;
+                area = contourArea(contours[i]);//得出一个二维码定位角的面积，以便计算其边长（area_side）（数据覆盖无所谓，三个定位角中任意一个数据都可以）
+                
+                //NSLog(@"/*/*/*/*/*w=%f, h=%f", rectPoint.size.width, rectPoint.size.height);
+            }
+            NSLog(@"/*/*/*/*/*w=%f, h=%f", rectPoint.size.width, rectPoint.size.height);
         }
         //cout<<"i= "<<i<<" hierarchy[i][2]= "<<hierarchy[i][2]<<" parentIdx= "<<parentIdx<<" ic= "<<ic<<endl;
         
