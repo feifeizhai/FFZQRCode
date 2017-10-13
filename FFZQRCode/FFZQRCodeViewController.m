@@ -149,17 +149,27 @@
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             CGRect rect = [QRCodeLocation opencvScanQRCode:self.myImage];
-            if (rect.size.width < 90 && rect.size.width != 0) {
+             if ((rect.size.width < 110 || rect.size.height < 110) && (rect.size.width != 0 || rect.size.height != 0)) {
+                CGFloat scale = 1.6;
+                if (rect.size.width) {
+                    scale = 110 / rect.size.width;
+                }else {
+                    scale = 110 / rect.size.height;
+                    
+                }
                 
-                CGFloat scale = 90 / rect.size.width;
                 dispatch_async(dispatch_get_main_queue(), ^{
+                    
                     [self.focusView autoZoomWithVideoZoom:self.focusView.zoomFactor * scale];
-                    if (rect.size.width == 0) {
-                        [self.recorder focusCenter];
-                    }
                     
                 });
                 
+            }else {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                    [self.recorder focusCenter];
+                    
+                });
             }
             NSLog(@"%@", NSStringFromCGRect(rect));
         });
