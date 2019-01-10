@@ -1,17 +1,26 @@
 PODS:
-  - Masonry (1.0.2)
-  - OpenCV (3.2.0):
-    - OpenCV/Dynamic (= 3.2.0)
-  - OpenCV/Dynamic (3.2.0)
+  - Masonry (1.1.0)
+  - OpenCV (3.4.2)
+  - ZXingObjC (3.6.4):
+    - ZXingObjC/All (= 3.6.4)
+  - ZXingObjC/All (3.6.4)
 
 DEPENDENCIES:
   - Masonry
   - OpenCV
+  - ZXingObjC (~> 3.6.4)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Masonry
+    - OpenCV
+    - ZXingObjC
 
 SPEC CHECKSUMS:
-  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
-  OpenCV: 0f7ab403d1e81769bc6f4f524c3c6928ecb1fdb8
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  OpenCV: 452909747854c92e0f59670961ed5131f5286cb5
+  ZXingObjC: 512b34b9b6920e8ef0461a4159d0814c5e48c28a
 
-PODFILE CHECKSUM: 09c3f4702dc47b841008fb2e7fec6dd31c8692d9
+PODFILE CHECKSUM: 4bd03d83e495af925b69a8f1e86a7328a1ac4208
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.0

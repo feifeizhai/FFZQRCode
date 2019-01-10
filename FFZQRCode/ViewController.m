@@ -18,24 +18,27 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
-    self.label.font = [UIFont fontWithName:@"iconfont" size:44];
-    self.label.text = @"\U0000e601";
-    self.label.textColor = [UIColor redColor];
-    
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btn setTitle:@"" forState:UIControlStateNormal];
-    [btn addTarget:self action:@selector(scan) forControlEvents:UIControlEventTouchUpInside];
-    
-  
+
 }
 
 - (IBAction)scan:(id)sender {
     
-    FFZQRCodeViewController *scanVC = [[FFZQRCodeViewController alloc] initWithFFZQRCodeScanResultBlock:^(NSString *result) {
-      
-        
-    }];
+    __weak ViewController *weakSelf = self;
+    FFZQRCodeViewController *scanVC = [[FFZQRCodeViewController alloc] init];
+    __weak FFZQRCodeViewController *weakScanVC = scanVC;
+    scanVC.scanResult = ^(NSString *result) {
+        UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"" message:result preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [weakScanVC startRun];
+            
+        }];
+        [alertVC addAction:okAction];
+        [weakSelf presentViewController:alertVC animated:YES completion:nil];
+    };
+    
+   
     [self.navigationController pushViewController:scanVC animated:YES];
 }
 

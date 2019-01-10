@@ -9,8 +9,7 @@
 #import "FFZRecordToolsView.h"
 #define BASE_FOCUS_TARGET_WIDTH 60
 #define BASE_FOCUS_TARGET_HEIGHT 60
-#define kDefaultMinZoomFactor 1.6
-#define kDefaultMaxZoomFactor 8
+
 
 @interface FFZRecordToolsView()
 {

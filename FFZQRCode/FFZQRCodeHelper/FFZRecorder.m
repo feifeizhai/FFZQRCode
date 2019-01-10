@@ -22,20 +22,19 @@
     AVCaptureSession *_captureSession;
     UIView *_previewView;
     AVCaptureStillImageOutput *_photoOutput;
-   
+    
     CIContext *_context;
     BOOL _shouldAutoresumeRecording;
     BOOL _needsSwitchBackToContinuousFocus;
     BOOL _adjustingFocus;
     int _beginSessionConfigurationCount;
     double _lastAppendedVideoTime;
-    void(^_pauseCompletionHandler)();
-
+    void(^_pauseCompletionHandler)(void);
+    
     size_t _transformFilterBufferWidth;
     size_t _transformFilterBufferHeight;
 }
 
-@property (strong, nonatomic) AVCaptureMetadataOutput * qrCodeOutput;
 @property (nonatomic, strong) AVCaptureVideoDataOutput *captureVideoDataOutput;
 
 @end
@@ -63,14 +62,14 @@ static char* FFZRecorderExposureContext = "ExposureContext";
         _videoStabilizationMode = AVCaptureVideoStabilizationModeStandard;
         
         [[NSNotificationCenter defaultCenter] addObserver:self  selector:@selector(_subjectAreaDidChange) name:AVCaptureDeviceSubjectAreaDidChangeNotification  object:nil];
-
+        
         _mirrorOnFrontCamera = NO;
         _automaticallyConfiguresApplicationAudioSession = YES;
         
         self.device = AVCaptureDevicePositionBack;
-
+        
         _photoConfiguration = [FFZPhotoConfiguration new];
-
+        
     }
     
     return self;
@@ -111,36 +110,19 @@ static char* FFZRecorderExposureContext = "ExposureContext";
     if (session != nil) {
         [self beginConfiguration];
         //设置扫描区域
-        CGFloat top = TOP / kScreenHeight;
-        CGFloat left = LEFT / kScreenWidth;
-        CGFloat width = 200 / kScreenWidth;
-        CGFloat height = 200 / kScreenHeight;
+        
         ///top 与 left 互换  width 与 height 互换
-       
+        
         if (![session.sessionPreset isEqualToString:_captureSessionPreset]) {
             if ([session canSetSessionPreset:_captureSessionPreset]) {
                 session.sessionPreset = _captureSessionPreset;
-                 //[session setSessionPreset:AVCaptureSessionPresetHigh];
+                //[session setSessionPreset:AVCaptureSessionPresetHigh];
             } else {
                 newError = [FFZRecorder createError:@"Cannot set session preset"];
             }
         }
         
-        if (!_qrCodeOutput) {
-            _qrCodeOutput = [[AVCaptureMetadataOutput alloc]init];
-            [_qrCodeOutput setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
-            if (![session.outputs containsObject:_qrCodeOutput]) {
-                if ([session canAddOutput:_qrCodeOutput]) {
-                    [session addOutput:_qrCodeOutput];
-                } else {
-                    if (newError == nil) {
-                        newError = [FFZRecorder createError:@"Cannot add qrCodeOutput inside the session"];
-                    }
-                }
-                
-            }
-             [_qrCodeOutput setRectOfInterest:CGRectMake(top,left, height, width)];
-        }
+        
         if (!_captureVideoDataOutput) {
             NSString* key = (NSString*)kCVPixelBufferPixelFormatTypeKey;
             NSNumber* value = [NSNumber numberWithUnsignedInt:kCVPixelFormatType_32BGRA];
@@ -163,7 +145,7 @@ static char* FFZRecorderExposureContext = "ExposureContext";
         }
         
         [self commitConfiguration];
-       
+        
     }
     _error = newError;
     
@@ -187,13 +169,13 @@ static char* FFZRecorderExposureContext = "ExposureContext";
     if (!success && error != nil) {
         *error = _error;
     }
-
+    
     _previewLayer.session = session;
     
     [self reconfigureVideoInput:YES audioInput:YES];
     
     [self commitConfiguration];
- 
+    
     return success;
 }
 
@@ -204,8 +186,8 @@ static char* FFZRecorderExposureContext = "ExposureContext";
     }
     
     if (!_captureSession.isRunning) {
-        _qrCodeOutput.metadataObjectTypes =@[AVMetadataObjectTypeQRCode];
-        self.videoZoomFactor = 1.6;
+        
+        self.videoZoomFactor = kDefaultMinZoomFactor;
         [_captureSession startRunning];
     }
     
@@ -249,11 +231,11 @@ static char* FFZRecorderExposureContext = "ExposureContext";
     [self pause:nil];
 }
 
-- (void)pause:(void(^)())completionHandler {
+- (void)pause:(void(^)(void))completionHandler {
     _isRecording = NO;
     
-    void (^block)() = ^{
-   
+    void (^block)(void) = ^{
+        
     };
     
     if ([FFZRecorder isSessionQueue]) {
@@ -268,14 +250,14 @@ static char* FFZRecorderExposureContext = "ExposureContext";
 }
 
 - (void)_focusDidComplete {
-    id<FFZRecorderDelegate> delegate = self.delegate;
+    //id<FFZRecorderDelegate> delegate = self.delegate;
     
     [self setAdjustingFocus:NO];
     
     
-    if ([delegate respondsToSelector:@selector(recorderDidEndFocus:)]) {
-        [delegate recorderDidEndFocus:self];
-    }
+    //    if ([delegate respondsToSelector:@selector(recorderDidEndFocus:)]) {
+    //        [delegate recorderDidEndFocus:self];
+    //    }
     
     if (_needsSwitchBackToContinuousFocus) {
         _needsSwitchBackToContinuousFocus = NO;
@@ -295,7 +277,7 @@ static char* FFZRecorderExposureContext = "ExposureContext";
                 [delegate recorderDidStartFocus:self];
             }
         } else {
-           
+            
             [self _focusDidComplete];
         }
     } else if (context == FFZRecorderExposureContext) {
@@ -343,7 +325,7 @@ static char* FFZRecorderExposureContext = "ExposureContext";
             } else {
                 NSLog(@"Failed to configure device: %@", error);
             }
-           
+            
         } else {
             
         }
@@ -364,7 +346,7 @@ static char* FFZRecorderExposureContext = "ExposureContext";
             if (newInput != nil) {
                 if ([_captureSession canAddInput:newInput]) {
                     [_captureSession addInput:newInput];
-                     [self addVideoObservers:newInput.device];
+                    [self addVideoObservers:newInput.device];
                 } else {
                     *error = [FFZRecorder createError:@"Failed to add input to capture session"];
                 }
@@ -477,34 +459,9 @@ static char* FFZRecorderExposureContext = "ExposureContext";
 
 
 #pragma mark AVCaptureMetadataOutputObjectsDelegate
-- (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
-{
-    NSString *stringValue;
-    
-    if ([metadataObjects count] >0) {
- 
-        
-        AVMetadataMachineReadableCodeObject * metadataObject = [metadataObjects objectAtIndex:0];
-        stringValue = metadataObject.stringValue;
-        NSLog(@"扫描结果：%@",stringValue);
-      //  self.scanResult(stringValue);
-        if (self.delegate && [self.delegate respondsToSelector:@selector(recorder:didFinishQRScanWithResoult:)]) {
-            [self.delegate recorder:self didFinishQRScanWithResoult:stringValue];
-        }
-        NSArray *arry = metadataObject.corners;
-        for (id temp in arry) {
-            NSLog(@"%@",temp);
-        }
-        
-    } else {
-        NSLog(@"无扫描信息");
-        return;
-    }
-    
-}
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
-
+    
     CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
     CVPixelBufferLockBaseAddress(imageBuffer,0);
     uint8_t *baseAddress = (uint8_t *)CVPixelBufferGetBaseAddress(imageBuffer);
@@ -526,7 +483,11 @@ static char* FFZRecorderExposureContext = "ExposureContext";
     //UIImage *image = [UIImage imageWithCGImage:newImage];
     CGImageRelease(newImage);
     CVPixelBufferUnlockBaseAddress(imageBuffer,0);
+    
     self.myImage = image;
+    if (self.delegate && [self.delegate respondsToSelector:@selector(recorderDidEndFocus:)]) {
+        [self.delegate recorderDidEndFocus:self];
+    }
 }
 
 // Perform an auto focus at the specified point. The focus mode will automatically change to locked once the auto focus is complete.
@@ -683,10 +644,10 @@ static char* FFZRecorderExposureContext = "ExposureContext";
 }
 
 /*
-- (AVCaptureStillImageOutput *)photoOutput {
-    return _photoOutput;
-}
-*/
+ - (AVCaptureStillImageOutput *)photoOutput {
+ return _photoOutput;
+ }
+ */
 - (CGFloat)videoZoomFactor {
     AVCaptureDevice *device = [self videoDevice];
     
@@ -694,18 +655,18 @@ static char* FFZRecorderExposureContext = "ExposureContext";
         return device.videoZoomFactor;
     }
     
-    return 1.6;
+    return kDefaultMinZoomFactor;
 }
 /*
-- (CGFloat)maxVideoZoomFactor {
-    return [self maxVideoZoomFactorForDevice:_device];
-}
-
-- (CGFloat)maxVideoZoomFactorForDevice:(AVCaptureDevicePosition)devicePosition
-{
-    return [FFZRecoderTools videoDeviceForPosition:devicePosition].activeFormat.videoMaxZoomFactor;
-}
-*/
+ - (CGFloat)maxVideoZoomFactor {
+ return [self maxVideoZoomFactorForDevice:_device];
+ }
+ 
+ - (CGFloat)maxVideoZoomFactorForDevice:(AVCaptureDevicePosition)devicePosition
+ {
+ return [FFZRecoderTools videoDeviceForPosition:devicePosition].activeFormat.videoMaxZoomFactor;
+ }
+ */
 - (void)setVideoZoomFactor:(CGFloat)videoZoomFactor {
     AVCaptureDevice *device = [self videoDevice];
     
@@ -713,10 +674,11 @@ static char* FFZRecorderExposureContext = "ExposureContext";
         NSError *error;
         if ([device lockForConfiguration:&error]) {
             if (videoZoomFactor <= device.activeFormat.videoMaxZoomFactor) {
-               
-                device.videoZoomFactor = videoZoomFactor ;
-             
-              
+                
+                if (videoZoomFactor > 1.0) {
+                    device.videoZoomFactor = videoZoomFactor;
+                }
+                
             } else {
                 NSLog(@"Unable to set videoZoom: (max %f, asked %f)", device.activeFormat.videoMaxZoomFactor, videoZoomFactor);
             }

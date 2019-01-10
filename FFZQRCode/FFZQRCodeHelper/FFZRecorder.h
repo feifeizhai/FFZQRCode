@@ -12,6 +12,8 @@
 #import "FFZRecorderDelegate.h"
 #import "FFZPhotoConfiguration.h"
 #import "FFZRecoderTools.h"
+#define kDefaultMinZoomFactor 1.5
+#define kDefaultMaxZoomFactor 5.0
 @interface FFZRecorder : NSObject<AVCaptureVideoDataOutputSampleBufferDelegate,AVCaptureMetadataOutputObjectsDelegate>
 
 @property (readonly, nonatomic) FFZPhotoConfiguration *__nonnull photoConfiguration;
@@ -90,8 +92,8 @@
  The record session to which the recorder will flow the camera/microphone buffers
  */
 /**
-@property (strong, nonatomic) FFZRecordSession *__nullable session;
-
+ @property (strong, nonatomic) FFZRecordSession *__nullable session;
+ 
  The video orientation. This is automatically set if autoSetVideoOrientation is enabled
  */
 @property (assign, nonatomic) AVCaptureVideoOrientation videoOrientation;
@@ -305,7 +307,7 @@
  if it is empty or not.
  @param completionHandler called on the main queue when the recorder is ready to record again.
  */
-- (void)pause:( void(^ __nullable)()) completionHandler;
+- (void)pause:( void(^ __nullable)(void)) completionHandler;
 
 /**
  Signal to the recorder that the previewView frame has changed.

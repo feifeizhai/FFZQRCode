@@ -9,8 +9,25 @@
 #import <Foundation/Foundation.h>
 
 #import <UIKit/UIKit.h>
+@interface QRCodeModel : NSObject;
+
+@property (strong, nonatomic) UIImage *image;
+@property (strong, nonatomic) NSNumber *w;
+@property (strong, nonatomic) NSNumber *h;
+@property (strong, nonatomic) NSNumber *x;
+@property (strong, nonatomic) NSNumber *y;
+@end
+
+
+
+
 @interface QRCodeLocation : NSObject
+
+
 + (QRCodeLocation *)share;
-+ (CGRect)opencvScanQRCode:(UIImage *)image;
-+ (UIImage *)imageOpencvScanQRCode:(UIImage *)img;
+
++ (QRCodeModel *)imageOpencvQRCode:(UIImage *)img;
+
+
+
 @end
