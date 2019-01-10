@@ -529,7 +529,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 697TSGGHN8;
-				GCC_PREFIX_HEADER = "/Users/jingge_xuxuebo/Desktop/项目资料/FFZQRCode/FFZQRCode/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FFZQRCode/PrefixHeader.pch";
 				INFOPLIST_FILE = FFZQRCode/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -544,7 +544,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 697TSGGHN8;
-				GCC_PREFIX_HEADER = "/Users/jingge_xuxuebo/Desktop/项目资料/FFZQRCode/FFZQRCode/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FFZQRCode/PrefixHeader.pch";
 				INFOPLIST_FILE = FFZQRCode/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
